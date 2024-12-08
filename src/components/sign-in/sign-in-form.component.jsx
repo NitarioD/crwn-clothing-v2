@@ -7,7 +7,7 @@ import FormInput from "../form-input/form-input.component";
 import {
   signInWithGooglePopup,
   signInAuthUserWithEmailAndPassword,
-  createUserDocumentFromAuth,
+  // createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase.utils";
 import { SignInContainer } from "./sign-in-form.styles";
 
@@ -34,10 +34,7 @@ const SignInForm = () => {
     const { email, password } = formFields;
 
     try {
-      const { user } = await signInAuthUserWithEmailAndPassword(
-        email,
-        password
-      );
+      await signInAuthUserWithEmailAndPassword(email, password);
       resetFormFields();
     } catch (error) {
       if (error.code === "auth/invalid-credential") {
