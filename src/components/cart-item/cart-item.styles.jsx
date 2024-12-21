@@ -1,4 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+
+export const Name = styled.span`
+  font-size: 16px;
+`;
 
 export const CartItemContainer = styled.div`
   width: 100%;
@@ -18,8 +22,4 @@ export const ItemDetails = styled.div`
   align-items: flex-start;
   justify-content: center;
   padding: 10px 20px;
-
-  span {
-    font-size: 16px;
-  }
 `;
