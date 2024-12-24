@@ -1,19 +1,20 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import { Fragment } from 'react';
+import { useSelector } from 'react-redux';
 
-import Spinner from "../../components/spinner/spinner.component";
 import {
   selectCategoriesMap,
   selectCategoriesIsLoading,
-} from "../../store/categories/category.selector";
-import CategoryPreview from "../../components/category-preview/category-preview.component";
+} from '../../store/categories/category.selector';
+
+import CategoryPreview from '../../components/category-preview/category-preview.component';
+import Spinner from '../../components/spinner/spinner.component';
 
 const CategoriesPreview = () => {
   const categoriesMap = useSelector(selectCategoriesMap);
   const isLoading = useSelector(selectCategoriesIsLoading);
 
   return (
-    <>
+    <Fragment>
       {isLoading ? (
         <Spinner />
       ) : (
@@ -24,7 +25,7 @@ const CategoriesPreview = () => {
           );
         })
       )}
-    </>
+    </Fragment>
   );
 };
 
