@@ -23,6 +23,7 @@ export const Body = styled.div`
   background-color: white;
   opacity: 0.7;
   position: absolute;
+  max-width: 23%;
 
   h2 {
     font-weight: bold;
@@ -35,6 +36,15 @@ export const Body = styled.div`
   p {
     font-weight: lighter;
     font-size: 16px;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 524px) {
+    min-width: 34%;
+  }
+
+  @media screen and (max-width: 400px) {
+    max-width: fit-content;
   }
 `;
 
@@ -68,5 +78,9 @@ export const DirectoryItemContainer = styled.div`
     ${Body} {
       opacity: 0.9;
     }
+  }
+
+  @media screen and (max-width: 400px) {
+    min-width: 50%;
   }
 `;
